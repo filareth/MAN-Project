@@ -14,11 +14,11 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Make port 8081 available to the world outside this container
-EXPOSE 8081
+EXPOSE 1234
 
 # Define environment variable
 ENV PYTHONUNBUFFERED=1
 ENV IP_ADDRESS="0.0.0.0"
 
 # Run the application
-CMD ["python3", "manage.py", "runserver", "0.0.0.0:8081"]
+CMD ["python3", "manage.py", "runserver", "0.0.0.0:1234"]
