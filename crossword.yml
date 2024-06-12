@@ -4,9 +4,6 @@ services:
   crossword:
     image: filareth/crossword:main
     container_name: crossword
-    command: python3 manage.py runserver 0.0.0.0:1234
-    volumes:
-      - .:/app
     ports:
       - "1234:1234"
     environment:
