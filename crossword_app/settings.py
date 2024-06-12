@@ -16,9 +16,8 @@ f.close()
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [f'{user_name}.pythonanywhere.com', '127.0.0.1']
-
-
+ALLOWED_HOSTS = [f'{user_name}.pythonanywhere.com', '127.0.0.1', '192.168.0.109']
+PORT = 80
 
 # Application definition
 

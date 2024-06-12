@@ -62,7 +62,7 @@ textarea:disabled {
     color: #f0f0f0;
     width: 5%;
     font-size: 2.7vh;
-    font-weight: 500;
+    font-weight: 800;
     text-decoration: none;
     margin: 0 1vw;
 
@@ -152,6 +152,7 @@ textarea:disabled {
 
 .input-form {
     padding: 1% 0;
+    width: 200%;
 }
 
 .flex-input-form {

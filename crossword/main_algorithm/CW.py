@@ -1,7 +1,7 @@
 """DONE permutation algorithm, check compatibility of words, visualisation of crossword"""
 
-from tkinter import *
-from tkinter import font
+#from tkinter import *
+#from tkinter import font
 from PIL import Image, ImageDraw, ImageFont
 #from pypdf import PdfReader
 import os

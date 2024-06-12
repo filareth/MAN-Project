@@ -23,7 +23,7 @@ def get_pairs_json(file_name):
     pairs = json.load(j)
     resp = ''
     for k, v in pairs.items():
-        resp += k.title() + ' = ' + v + '\n'
+        resp += k.title() + ' - ' + v + '\n'
     return resp
 
     
@@ -46,9 +46,14 @@ def index(request):
             messages.success(request, 'Вітаємо на форумі. Для початку пропонуємо вам ознайомитись зі сторінкою "Про проєкт".')
         file_name = 'Generation.json'
         new_form = NewCrosswordForm(initial={'words': get_pairs_json(file_name), 'name': 'Best Crossword Puzzle', 'time': 10})
-        response = render(request, 'crossword/index.html', {
+        '''response = render(request, 'crossword/index.html', {
+                        'form': new_form,
+                    })'''
+        request.POST = new_form
+        return generate(request)
+        '''response = render(request, 'crossword/index.html', {
             'form': new_form,
-        })
+        })'''
     if request.COOKIES.get('id') == None:
         response.set_cookie(key='id', value=str(random.randint(1, 100000)))
     return response
