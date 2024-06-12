@@ -18,6 +18,7 @@ EXPOSE 8081
 
 # Define environment variable
 ENV PYTHONUNBUFFERED=1
+ENV IP_ADDRESS="0.0.0.0"
 
 # Run the application
-CMD IP_ADDRESS=$(hostname -I | awk '{print $1}') && python3 manage.py runserver $IP_ADDRESS:8081
+CMD ["python3", "manage.py", "runserver", "0.0.0.0:8081"]
